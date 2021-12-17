@@ -1,12 +1,18 @@
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import Home from './views/Home/Home';
+import Header from './components/Header/Header';
 
-function App() {
+function App(props) {
+
+    console.log(props);
+
     return (
         <div className="App">
-            <Home />
+            <Header />
+            <Outlet />
         </div>
-  );
+    );
 }
 
 export default App;
