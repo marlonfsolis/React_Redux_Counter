@@ -4,7 +4,7 @@ const About = () => {
     return (
         <div>
             <h1>About</h1>
-            <p>About page</p>
+            <p>Application to see how work with Redux in React.js</p>
         </div>
     );
 };
