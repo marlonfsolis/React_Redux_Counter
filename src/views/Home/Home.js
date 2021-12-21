@@ -5,22 +5,22 @@ import CounterOutput from '../../components/CounterOutput/CounterOutput';
 
 const Home = () => {
 
-    const [ counteResult, setCounteResult ] = useState(0);
+    const [ counterResult, setCounterResult ] = useState(0);
 
     const countOne = () => {
-        setCounteResult(counteResult + 1);
+        setCounterResult(counterResult + 1);
     };
 
     const subtractOne = () => {
-        setCounteResult(counteResult - 1);
+        setCounterResult(counterResult - 1);
     };
 
     const countFive = () => {
-        setCounteResult(counteResult + 5);
+        setCounterResult(counterResult + 5);
     };
 
     const subtractFive = () => {
-        setCounteResult(counteResult - 5);
+        setCounterResult(counterResult - 5);
     };
 
     return (
@@ -28,7 +28,7 @@ const Home = () => {
             <h1>Counter Application</h1>
             <p>Counter application to count numbers.</p>
 
-            <CounterOutput value={counteResult} />
+            <CounterOutput value={counterResult} />
 
             <CounterControl label='Count 1' onClick={countOne} />
             <CounterControl label='Subtract 1' onClick={subtractOne} />

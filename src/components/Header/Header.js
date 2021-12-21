@@ -11,6 +11,7 @@ const Header = () => {
                     <ul>
                         <li><Link to="/">App</Link></li>
                         <li><Link to="/home">Home</Link></li>
+                        <li><Link to="/counter/redux">Counter Redux</Link></li>
                         <li><Link to="/about">About</Link></li>
                     </ul>
                 </nav>
