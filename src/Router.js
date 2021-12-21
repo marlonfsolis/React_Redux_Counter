@@ -5,6 +5,7 @@ import App from './App';
 import Home from './views/Home/Home';
 import About from './views/About/About';
 import CounterRedux from './views/CounterRedux/CounterRedux';
+import NoFound from './views/NotFound/NotFound';
 
 const Router = () => {
 	return (
@@ -16,6 +17,7 @@ const Router = () => {
 					<Route path='about' element={<About />}></Route>
 					<Route path='counter/redux' element={<CounterRedux />}></Route>
 				</Route>
+				<Route path='*' element={<NoFound />}></Route>
 			</Routes>
 		</BrowserRouter>
 	);
