@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { increment, decrement } from '../../store/reducers/counterSlice';
+import { increment, decrement, incrementByAmount } from '../../store/reducers/counterSlice';
 
 import CounterControl from '../../components/CounterControl/CounterControl';
 import CounterOutput from '../../components/CounterOutput/CounterOutput';
 
 const CounterRedux = () => {
 
+    const dispatch = useDispatch();
     const counterResult = useSelector(state => state.counter.value);
 
 
@@ -18,10 +19,10 @@ const CounterRedux = () => {
 
             <CounterOutput value={counterResult} />
 
-            <CounterControl label='Count 1' onClick={increment} />
-            <CounterControl label='Subtract 1' onClick={decrement} />
-            {/*<CounterControl label='Count 5' onClick={countFive} />*/}
-            {/*<CounterControl label='Subtract 5' onClick={subtractFive} />*/}
+            <CounterControl label='Count 1' onClick={() => dispatch(increment())} />
+            <CounterControl label='Subtract 1' onClick={() => dispatch(decrement())} />
+            <CounterControl label='Count 5' onClick={() => dispatch(incrementByAmount(5))} />
+            <CounterControl label='Subtract 5' onClick={() => dispatch(incrementByAmount(-5))} />
         </div>
     );
 };
