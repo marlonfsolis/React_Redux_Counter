@@ -1,3 +1,10 @@
+# Overview
+This project demostrate how work with React.js and Redux.js.
+We can see how the counter componet access the data stored on the redux store.
+
+We can fin how work with React-Router too. Here we use nested routes to use App component as a layout.
+We define Router component to hold all the routes on it.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
